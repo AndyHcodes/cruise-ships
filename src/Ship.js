@@ -1,7 +1,8 @@
 class Ship {
-  constructor(type) {
+  constructor(location) {
     this.capacity = 50;
     this.passengers = 0;
+    this.location = location;
   }
   addPassenger() {
     this.passengers += 1;

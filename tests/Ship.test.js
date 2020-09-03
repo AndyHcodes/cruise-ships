@@ -1,7 +1,14 @@
-const Ship = require("../src/Ship");
+const Ship = require("../src/Ship.js");
 
-describe("Ship", () => {
-  xit("returns an object", () => {
-    expect(newShip("Luxury")).toBeInstanceOf(Object);
+describe("ship", () => {
+  it("returns an object", () => {
+    expect(new Ship("Luxury", "Hull")).toBeInstanceOf(Object);
+  });
+});
+
+describe("starting point", () => {
+  it("returns the starting point of the ship", () => {
+    const ship = new Ship("Hull");
+    expect(ship.location).toEqual("Hull");
   });
 });

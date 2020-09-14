@@ -19,13 +19,14 @@ describe("port and ships", () => {
   });
 
   it("can add a ship", () => {
+    const ship = jest.fn();
     port.addShip(ship);
 
     expect(port.ships).toContain(ship);
   });
 
   it("removes a ship", () => {
-    const ship1 = "QE2";
+    const ship1 = jest.fn();
 
     port.addShip(ship);
     port.addShip(ship1);

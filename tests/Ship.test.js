@@ -59,6 +59,7 @@ describe("with ports and an itinerary", () => {
     ship.dock();
 
     expect(ship.currentPort).toBe(calais);
+    expect(calais.addShip).toHaveBeenCalledWith(ship);
   });
 
   it("can't sail further than its itinerary", () => {
@@ -68,7 +69,7 @@ describe("with ports and an itinerary", () => {
     expect(() => ship.setSail()).toThrowError("End of itinerary reached");
   });
 
-  fit("gets added to port on instantiation", () => {
+  it("gets added to port on instantiation", () => {
     expect(port.addShip).toHaveBeenCalledWith(ship);
   });
 });

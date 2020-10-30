@@ -58,6 +58,7 @@ describe("with ports and an itinerary", () => {
     ship.setSail();
     ship.dock();
 
+   
     expect(ship.currentPort).toBe(calais);
     expect(calais.addShip).toHaveBeenCalledWith(ship);
   });
